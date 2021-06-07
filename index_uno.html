@@ -78,7 +78,132 @@
             <div class="site4">
                  <div id="productos"> 
                      
-                      
+                  .tab {
+                     border: 1px solid #ccc;
+                     background-color: #f1f1f1;
+                   
+                   }
+                   
+                   /* Style the buttons inside the tab */
+                   .tab button {
+                     display: block;
+                     background-color: inherit;
+                     color: black;
+                     padding: 0px 0px;
+                     width: 100%;
+                     border: none;
+                     outline: none;
+                     text-align: center;
+                     cursor: pointer;
+                     transition: 0.3s;
+                     font-size: 17px;
+                     height: 50px;
+                   }
+                   
+                   /* Change background color of buttons on hover */
+                   .tab button:hover {
+                     background-color: lightskyblue;
+                   }
+                   
+                   /* Create an active/current "tab button" class */
+                   .tab button.active {
+                     background-color: lightskyblue;
+                   }
+                   
+                   /* Style the tab content */
+                   .tabcontent {
+                     background-color:turquoise;
+                     color: black;
+                     padding: 0px 12px;
+                     border: 1px solid #ccc;
+                     width: 348%;
+                     border-left: none;
+                     margin-top: 0px;
+                     margin-left: 0Px;
+                     height: 100px;
+                   }
+                   
+                   .column {
+                       float: left;
+                       color: white;
+                       background-color: #1A5276;
+                       display: inline-block;
+                       width: 25%;
+                       margin-left: 80px;
+                       font-size: 20px;
+                       text-align: center;
+                       height: 50px;
+                       padding: 10px 1px;
+                   }
+                   
+                   </style>
+                   </head>
+                   <body>
+                   
+                   <div class="column">
+                       <p>Soy Empresa</p>
+                       <div class="tab">
+                           <button class="tablinks" onclick="openCity(event, 'Nomina')" id="defaultOpen">Nomina</button>
+                           <button class="tablinks" onclick="openCity(event, 'Contabilidad')">Contabilidad</button>
+                           <button class="tablinks" onclick="openCity(event, 'Finanzas')">Finanzas</button>
+                       </div>
+                   
+                       <div id="Nomina" class="tabcontent">
+                           <h3>Nomina</h3>
+                           <p>Procesamos y pagamos sus nominas</p>
+                       </div>
+                   
+                       <div id="Contabilidad" class="tabcontent">
+                           <h3>Contabilidad</h3>
+                           <p>Asesoramos y/o Procesamos su contabilidad</p> 
+                       </div>
+                   
+                       <div id="Finanzas" class="tabcontent">
+                           <h3>Finanzas</h3>
+                           <p>Preparamos y hacemos seguimiento a sus Presupuestos</p>
+                       </div>
+                   </div>
+                   
+                   <div class="column">
+                       <p>Soy Emprendimiento</p>
+                       <div class="tab">
+                       <button class="tablinks" onclick="openCity(event, 'Nomina')" id="defaultOpen">Nomina</button>
+                       <button class="tablinks" onclick="openCity(event, 'Contabilidad')">Contabilidad</button>
+                       <button class="tablinks" onclick="openCity(event, 'Finanzas')">Finanzas</button>
+                       </div>
+                   
+                   </div>
+                   
+                   <div class="column">
+                       <p>Soy Persona Natural</p>
+                       <div class="tab">
+                           <button class="tablinks" onclick="openCity(event, 'Nomina')" id="defaultOpen">Nomina</button>
+                           <button class="tablinks" onclick="openCity(event, 'Contabilidad')">Contabilidad</button>
+                           <button class="tablinks" onclick="openCity(event, 'Finanzas')">Finanzas</button>
+                       </div>
+                   
+                   </div>
+                   
+                   
+                   <script>
+                   function openCity(evt, cityName) {
+                     var i, tabcontent, tablinks;
+                     tabcontent = document.getElementsByClassName("tabcontent");
+                     for (i = 0; i < tabcontent.length; i++) {
+                       tabcontent[i].style.display = "none";
+                     }
+                     tablinks = document.getElementsByClassName("tablinks");
+                     for (i = 0; i < tablinks.length; i++) {
+                       tablinks[i].className = tablinks[i].className.replace(" active", "");
+                     }
+                     document.getElementById(cityName).style.display = "block";
+                     evt.currentTarget.className += " active";
+                   }
+                   
+                   // Get the element with id="defaultOpen" and click on it
+                   document.getElementById("defaultOpen").click();
+                   </script>
+                    
                      
                  </div>
             </div>
